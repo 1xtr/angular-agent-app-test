@@ -1,13 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-html, body {
-  height: 100%;
+html, body {height: 100%;}
+body {margin: 0;font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.xtr-container {
+  min-width: 288px;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+@media (min-width: 575.98px){
+  .xtr-container {
+    padding: 0 calc(50vw - 200px);
+  }
+}
+
+@media (min-width: 767.98px){
+  .xtr-container {
+    padding: 0 calc(50vw - 300px);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .xtr-container {
+    padding: 0 calc(50vw - 400px);
+  }
+}
+
+@media (min-width: 1199.98px){
+  .xtr-container {
+    padding: 0 calc(50vw - 500px);
+  }
+}
+
+.xtr-grid-container {
+  min-width: 288px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  background-color: #ccc;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  grid-template-areas:
+    "header header header header"
+    "economy economy economy economy"
+    "advanced advanced advanced advanced"
+    "lux lux lux lux";
+}
+
+.xtr-grid-tile-header {
+  background-color: #673ab7;
+  color: #FFF;
+  grid-area: header;
+  padding: 0.5rem;
+}
+.xtr-grid-tile {
+  justify-content: flex-start;
+  padding: 0.5rem;
+  background-color: #fff;
+}
+.xtr-aeroflot-economy {
+  grid-area: economy;
+}
+
+.xtr-aeroflot-advanced {
+  grid-area: advanced;
+}
+.xtr-aeroflot-lux {
+  grid-area: lux;
 }
