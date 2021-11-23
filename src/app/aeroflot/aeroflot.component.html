@@ -1,0 +1,12 @@
+<div class="xtr-grid-container">
+  <div class="xtr-grid-tile-header">Аэрофлот</div>
+  <div class="xtr-grid-tile xtr-aeroflot-economy">
+    Эконом: <span [class.xtr-unavailable-tariff]="!result?.economy">{{result?.economy || result?.unavailableMsg}}</span>
+  </div>
+  <div class="xtr-grid-tile xtr-aeroflot-advanced">
+    Продвинутый: <span [class.xtr-unavailable-tariff]="!result?.adv">{{result?.adv || result?.unavailableMsg}}</span>
+  </div>
+  <div class="xtr-grid-tile xtr-aeroflot-lux">
+    Люкс: <span [class.xtr-unavailable-tariff]="!result?.lux">{{result?.lux || result?.unavailableMsg}}</span>
+  </div>
+</div>
