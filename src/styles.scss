@@ -17,11 +17,17 @@ body {margin: 0;font-family: Roboto, "Helvetica Neue", sans-serif;}
   .xtr-container {
     padding: 0 calc(50vw - 200px);
   }
+  .xtr-grid-container {
+    width: 383px;
+  }
 }
 
-@media (min-width: 767.98px){
+@media (min-width: 767.98px) {
   .xtr-container {
     padding: 0 calc(50vw - 300px);
+  }
+  .xtr-grid-container {
+    width: 583px;
   }
 }
 
@@ -29,17 +35,20 @@ body {margin: 0;font-family: Roboto, "Helvetica Neue", sans-serif;}
   .xtr-container {
     padding: 0 calc(50vw - 400px);
   }
+  .xtr-grid-container {
+    width: 710px;
+  }
 }
 
 @media (min-width: 1199.98px){
   .xtr-container {
     padding: 0 calc(50vw - 500px);
   }
+
 }
 
 .xtr-grid-container {
   min-width: 288px;
-  width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: grid;
@@ -72,6 +81,11 @@ body {margin: 0;font-family: Roboto, "Helvetica Neue", sans-serif;}
 .xtr-aeroflot-advanced {
   grid-area: advanced;
 }
+
 .xtr-aeroflot-lux {
   grid-area: lux;
+}
+
+.xtr-unavailable-tariff {
+  color: #FF0000;
 }
