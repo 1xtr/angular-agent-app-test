@@ -1,0 +1,22 @@
+<p>Исходные данные по путешествию</p>
+<form [formGroup]="inputForm" (submit)="submit()">
+  <mat-form-field appearance="fill" class="xtr-form-field">
+    <mat-label>Расстояние в км</mat-label>
+    <input matInput formControlName="distance" required type="number">
+    <mat-error *ngIf="inputForm.get('distance')?.invalid">Введите число от 1 до 10000</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="xtr-form-field">
+    <mat-label>Возраст пассажира(полных лет)</mat-label>
+    <input matInput formControlName="age" required type="number">
+    <mat-error *ngIf="inputForm.get('age')?.invalid">Возраст должен быть в пределах 1 - 100</mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="xtr-form-field">
+    <mat-label>Вес багажа в кг</mat-label>
+    <input matInput formControlName="baggage" required type="number">
+    <mat-error *ngIf="inputForm.get('baggage')?.errors?.['required']">Вес багажа в пределах 1 - 60</mat-error>
+    <mat-error *ngIf="inputForm.get('baggage')?.errors?.['max']">Нет подходящих тарифов с багажом более 60 кг
+    </mat-error>
+  </mat-form-field>
+  <button mat-flat-button color="primary" [disabled]="inputForm.invalid" style="width: 100%" type="submit">Рассчитать
+  </button>
+</form>
