@@ -2,7 +2,7 @@
 <form [formGroup]="inputForm" (submit)="submit()">
   <mat-form-field appearance="fill" class="xtr-form-field">
     <mat-label>Расстояние в км</mat-label>
-    <input matInput formControlName="distance" required type="number">
+    <input matInput formControlName="distance" type="number">
     <mat-error *ngIf="inputForm.get('distance')?.invalid">Введите число от 1 до 10000</mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" class="xtr-form-field">

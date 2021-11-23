@@ -10,7 +10,7 @@ import {StoreService} from "../_services/store.service";
 export class InputDataComponent implements OnInit {
   inputForm: FormGroup = new FormGroup({
       distance: new FormControl(
-        '',
+        '3500',
         [
           Validators.required,
           Validators.pattern(/\d/),
@@ -18,7 +18,7 @@ export class InputDataComponent implements OnInit {
           Validators.max(10000)
         ]),
       age: new FormControl(
-        '',
+        '30',
         [
           Validators.required,
           Validators.pattern(/\d/),
@@ -26,7 +26,7 @@ export class InputDataComponent implements OnInit {
           Validators.max(100)
         ]),
       baggage: new FormControl(
-        '',
+        '23',
         [
           Validators.required,
           Validators.pattern(/\d/),
